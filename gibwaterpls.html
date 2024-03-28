@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gibwaterpls</title>
+    <style>
+        body {
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            background-image: url('waterpls3.jpeg');
+            background-size: cover;
+            height: 200px;
+            text-align: center;
+            color: white;
+            padding-top: 50px;
+        }
+        .second-image {
+            background-image: url('pail.jpeg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 117px;
+            width: 100%;
+            cursor: pointer;
+        }
+        .tilted {
+            transform: rotate(45deg);
+        }
+        .third-image {
+            background-image: url('agua.jpeg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100px;
+            width: 200px;
+            position: absolute;
+            top: calc(320px + 10px);
+            left: calc(50% + 85px);
+            transform: translateX(-50%);
+            display: none;
+        }
+        .fourth-image {
+            background-image: url('nowater.jpeg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: right center;
+            height: 400px;
+            width: 800px;
+            position: absolute;
+            top: calc(320px + 10px);
+            left: calc(50% + 85px);
+            transform: translateX(-50%);
+        }
+        .fifth-image {
+            background-image: url('yeswater2.jpeg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: right center;
+            height: 400px;
+            width: 800px;
+            position: absolute;
+            top: calc(320px + 10px);
+            left: calc(50% + 65px);
+            transform: translateX(-50%);
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1></h1>
+</div>
+
+<div class="second-image" onclick="toggleTilt()"></div>
+
+<div class="third-image" id="thirdImage"></div>
+<div class="fourth-image" id="fourthImage"></div>
+<div class="fifth-image" id="fifthImage"></div>
+
+<script>
+    function toggleTilt() {
+        var secondImage = document.querySelector('.second-image');
+        secondImage.classList.toggle('tilted');
+        
+        var fifthImage = document.getElementById('fifthImage');
+        fifthImage.style.display = fifthImage.style.display === 'block' ? 'none' : 'block';
+    }
+</script>
+
+</body>
+</html>
